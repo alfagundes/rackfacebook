@@ -1,46 +1,299 @@
-body{
-    font-family: 'Lexend Zetta', sans-serif;
-}
-header {
-    text-align: center;
-}
-
-.grid{
-    display: grid;
-    justify-content: center;
+body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+  font-family: 'Nunito Sans', arial;
+  color: #373737;
+  width: 100%;
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
-  }
+body.home-page {
+  margin-top: 75px;
+}
 
-  .column {
-    flex: 25%;
-    max-width: 25%;
-    padding: 0 10px;
-    border-radius: 20px;
-  }
-  
-  .column img {
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100%;
-  }
-  
-  /* Responsive layout - makes a two column-layout instead of four columns */
-  @media screen and (max-width: 800px) {
-    .column {
-      flex: 50%;
-      max-width: 50%;
-    }
-  }
-  
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .column {
-      flex: 100%;
-      max-width: 100%;
-    }
-  }
+/* Inicio Header */
+
+body .header-site {
+  top: 42px;
+  position: fixed;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .1);
+  z-index: 9;
+}
+
+header .header-site {
+  color: #373737;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 75px;
+  background-color: #ffffff;
+  border-bottom: 1px solid;
+}
+
+header .header-site .menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  --width: 100%;
+  padding: 0px;
+}
+
+header .header-site .menu .logo {
+  width: 115px;
+  margin-left: 25px;
+  margin-top: 10px;
+}
+
+div {
+  display: block;
+}
+
+nav {
+  display: block;
+}
+
+header .header-site .menu nav {
+  width: 560px;
+  margin-left: 25px
+}
+
+header .header-site ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+header .header-site .menu nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  margin-block-end: 1em;
+  margin-block-start: 1em;
+  margin-inline-end: 0px;
+  margin-inline-start: 0px;
+  padding-inline-start: 40px;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+header .header-site .menu nav ul li {
+  font-weight: bold;
+}
+
+header .header-site ul li {
+  padding: 8px 0;
+  transition: .3s;
+}
+
+header .header-site a {
+  color: #2a3e55;
+  text-decoration: none;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+b {
+  font-weight: bold;
+}
+
+.menu-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  transition: .3s;
+  padding: 5px 15px;
+  border: 2px solid #3aac8b;
+  border-radius: 10px;
+  color: #3aac8b;
+  width: 120px;
+  height: 30px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+/* Fim Header */
+
+/* Inicio main */
+
+main {
+  height: 980px;
+}
+
+.container-professores {
+  width: 1024px;
+  margin: 0 auto;
+  padding: 80px 10px;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: right;
+}
+
+.container-inicial {
+  margin: 0 auto;
+  padding: 20% 10px;
+  text-align: center;
+}
+
+.titulos {
+  text-align: center;
+}
+
+.cartao-professor {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 32px;
+  border-radius: 10px;
+  border: 1px solid #e2e3e5;
+  text-align: center;
+  padding: 20px 20px;
+}
+
+.cartao-professor img {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  opacity: 1;
+  z-index: 5;
+}
+
+/* Fim Inicio */
+
+/* Inicio Footer */
+
+footer {
+  background-color: #3aac8b;
+  color: #fff;
+  border-top: 0 solid;
+  display: block;
+}
+
+.capa {
+  width: 933px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+footer .capa {
+  padding: 50px;
+}
+
+footer .borda-branca {
+  border-bottom: 1px solid rgba(255, 255, 255, .2);
+  padding-bottom: 30px;
+}
+
+.linha {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+footer .footer-links {
+  padding: 0;
+  margin: 0;
+}
+
+footer .footer-links li {
+  list-style: none;
+  margin: 0;
+  padding: 12px 0;
+  position: relative;
+}
+
+footer .footer-links ul.itens-footer li {
+  padding: 5px 0;
+}
+
+footer .footer-links li a {
+  color: #fff;
+}
+
+.coluna-footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Fim Footer */
+
+/*informacoes professores*/
+
+main .info-basicas {
+  width: 640px;
+  padding: 20px 20px 0;
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+  color: #000;
+}
+
+.info-basicas {
+  margin-left: 150px;
+}
+
+.flet {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  padding: 15px 15px;
+}
+
+.flet img {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+}
+
+.sessao-detalhes {
+  padding: 30px 20px;
+  border-bottom: 3px solid #f7f7f5;
+  border: 1px solid #e4ebf2;
+  border-top: 0;
+  border-radius: 0 0 3px 3px;
+  width: 560px;
+}
+
+iframe {
+  padding: 20px;
+}
+
+/*fim informacoes professores*/
